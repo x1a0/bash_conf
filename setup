@@ -1,0 +1,11 @@
+#! /bin/bash
+
+CWD=`pwd`
+FILES=$CWD/.bash*
+
+for f in $FILES; do
+    filename=$(basename $f)
+    echo -ne "setup \033[32m$filename\033[0m ... "
+    /bin/ln -sf $f $HOME/$filename
+    echo -e "done."
+done

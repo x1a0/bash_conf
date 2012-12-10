@@ -1,0 +1,24 @@
+#! /bin/bash
+
+OS="`uname`"
+PAGER="less -r"
+EDITOR=vim
+
+LC_ALL=C LANG=C LANGUAGE=C
+#locale -a 2>/dev/null | grep -e 'zh_CN\.\(utf8\|UTF-8\)' >/dev/null && LC_ALL=zh_CN.UTF-8
+locale -a 2>/dev/null | grep -e 'en_US\.\(utf8\|UTF-8\)' >/dev/null && LC_ALL=en_US.UTF-8
+locale -a 2>/dev/null | grep -e 'en_US\.\(utf8\|UTF-8\)' >/dev/null && LANG=en_US.UTF-8 LANGUAGE=en_US
+TZ=Asia/Shanghai
+
+# Find Path
+PATH_EXPR=(
+    /usr/local/{bin,sbin}
+    /usr/local/share/python
+)
+for EXPR in ${PATH_EXPR[@]}; do
+    for DIR in $EXPR; do
+        [ -d "$DIR" ] && PATH=$DIR:$PATH
+    done
+done
+
+export OS PAGER EDITOR LC_ALL LANG LANGUAGE TZ PATH
