@@ -16,5 +16,6 @@ if [ "$TERM" != "dumb" ];then
     esac
 fi
 
-alias ll='ls -alrt'
+alias ll='ls -lrt'
+alias lla='ls -alrt'
 alias 'ps?'='ps ax | grep'
