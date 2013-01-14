@@ -63,3 +63,6 @@ eval "$PROMPT_COMMAND"
 unset _PROMPT_PREFIX _UH_COLOR _UH_BOLD _UN_UNDERLINE
 
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
+[ -f ~/.bash_ec2 ] && source ~/.bash_ec2
+
+`which screen-attach` && screen-attach
