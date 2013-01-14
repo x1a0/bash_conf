@@ -8,12 +8,15 @@ LC_ALL=C LANG=C LANGUAGE=C
 #locale -a 2>/dev/null | grep -e 'zh_CN\.\(utf8\|UTF-8\)' >/dev/null && LC_ALL=zh_CN.UTF-8
 locale -a 2>/dev/null | grep -e 'en_US\.\(utf8\|UTF-8\)' >/dev/null && LC_ALL=en_US.UTF-8
 locale -a 2>/dev/null | grep -e 'en_US\.\(utf8\|UTF-8\)' >/dev/null && LANG=en_US.UTF-8 LANGUAGE=en_US
-TZ=Asia/Shanghai
+TZ=Europe/Stockholm
 
 # Find Path
 PATH_EXPR=(
     /usr/local/{bin,sbin}
     /usr/local/share/python
+    /usr/local/share/npm/bin
+    /usr/local/Cellar/ruby/1.9.3-p327/bin
+    $HOME/.bash_conf/tools
 )
 for EXPR in ${PATH_EXPR[@]}; do
     for DIR in $EXPR; do
