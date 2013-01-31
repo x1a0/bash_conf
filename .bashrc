@@ -42,7 +42,7 @@ case "$TERM" in
 xterm*|rxvt*)
     PROMPT_COMMAND='echo -ne "\033]0;${BASH_TITLE-${USER}@${HOSTNAME}} \007"'
     ;;  
-screen)
+screen|screen-256color)
     PROMPT_COMMAND='echo -ne "\033k${BASH_TITLE-${USER}@${HOSTNAME}} \033\\"'
     FLAGS='s'
     ;;  
