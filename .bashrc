@@ -52,10 +52,10 @@ esac
 
 case "$(uname)" in
     Darwin)
-        PS1="$_PROMPT_PREFIX[\$(batterystatus)\[$_UH_COLOR\u(\j$FLAGS)@\h $_UH_UNDERLINE\w\$(parse_git_branch)$_UH_NONE]\$ "
+        PS1="$_PROMPT_PREFIX[\$(batterystatus)\[$_UH_COLOR\u(\j$FLAGS)@\H $_UH_UNDERLINE\w\$(parse_git_branch)$_UH_NONE]\$ "
         ;;
     *)
-        PS1="$_PROMPT_PREFIX[\[$_UH_COLOR\u(\j$FLAGS)@\h $_UH_UNDERLINE\w\$(parse_git_branch)$_UH_NONE]\$ "
+        PS1="$_PROMPT_PREFIX[\[$_UH_COLOR\u(\j$FLAGS)@\H $_UH_UNDERLINE\w\$(parse_git_branch)$_UH_NONE]\$ "
         ;;
 esac
 
