@@ -64,5 +64,6 @@ unset _PROMPT_PREFIX _UH_COLOR _UH_BOLD _UN_UNDERLINE
 
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_ec2 ] && source ~/.bash_ec2
+[ -f ~/.bash_conf/base16-tomorrow.dark.sh ] && source ~/.bash_conf/base16-tomorrow.dark.sh
 
 `which screen-attach` && screen-attach
