@@ -19,3 +19,4 @@ fi
 alias ll='ls -lrt'
 alias lla='ls -alrt'
 alias 'ps?'='ps ax | grep'
+alias tmux="tmux a"
