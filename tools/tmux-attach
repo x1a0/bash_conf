@@ -1,0 +1,23 @@
+#! /bin/bash
+
+[ "$TERM" == "screen" ] && exit 1
+
+TMUX_BIN=`which tmux`
+
+out=$($TMUX_BIN ls 2>/dev/null)
+
+if [ "$?" -ne 0 ]; then
+  exit 0
+fi
+
+echo "Select a session ID or Ctrl-C:"
+
+OIFS="$IFS"
+IFS=$'\n'
+select session in $out; do
+  IFS=':' read -a id <<< "$session"
+  $TMUX_BIN attach -d -t "$id"
+  exit 0
+  IFS="$OIFS"
+done
+
